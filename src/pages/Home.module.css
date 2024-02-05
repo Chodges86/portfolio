@@ -1,0 +1,66 @@
+.logo {
+  position: absolute;
+  top: 70px;
+  left: 85px;
+  height: 218.36px;
+  width: 300px;
+}
+
+#intro {
+    width: 50%;
+}
+
+
+.page {
+    position: absolute;
+    top: 350px;
+    left: 200px;
+    padding-left: 100px;
+}
+
+.page h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 85px;
+    font-weight: 200;
+    text-align: left;
+    color: #0e8388;
+    margin: 0;
+}
+
+.page h2 {
+    position: relative;
+    top: -40px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 60px;
+    font-weight: 100;
+    text-align: left;
+    color: #CBE4DE;
+    margin: 0;
+}
+
+.page p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    color: #CBE4DE;
+    text-align: left;
+    margin: 0;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 680px) {
+  
+}
+
+@media screen and (max-width: 680px) {
+ 
+}
