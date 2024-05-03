@@ -3,64 +3,258 @@
   top: 70px;
   left: 85px;
   height: 218.36px;
-  width: 300px;
+  min-width: 300px;
+  z-index: 20;
+}
+
+.page {
+  position: absolute;
+  top: 350px;
+  left: 200px;
+  padding-left: 100px;
+}
+
+.page section {
+  margin-bottom: 200px;
 }
 
 #intro {
-    width: 50%;
-}
-
-
-.page {
-    position: absolute;
-    top: 350px;
-    left: 200px;
-    padding-left: 100px;
+  width: 50%;
+  text-align: left;
+  min-height: 70vh;
+  margin-bottom: 30vh;
 }
 
 .page h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 85px;
-    font-weight: 200;
-    text-align: left;
-    color: #0e8388;
-    margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 85px;
+  font-weight: 200;
+  text-align: left;
+  color: #0e8388;
+  margin: 0;
 }
 
 .page h2 {
-    position: relative;
-    top: -40px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 60px;
-    font-weight: 100;
-    text-align: left;
-    color: #CBE4DE;
-    margin: 0;
+  position: relative;
+  top: -40px;
+  font-family: "Nunito", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  text-align: left;
+  color: #cbe4de;
+  margin: 0;
 }
 
-.page p {
-    font-family: 'Nunito', sans-serif;
-    font-size: 25px;
-    font-weight: 100;
-    color: #CBE4DE;
-    text-align: left;
-    margin: 0;
+.page h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  color: #cbe4de;
+  margin-bottom: 50px;
+}
+
+.page p, .page li {
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+  color: #cbe4de;
+  text-align: left;
+  margin: 0;
+}
+
+.page a {
+  color: #0e8388;
+}
+
+.page a:visited {
+  color: #0c6e71;
+}
+
+.page img {
+  margin-top: 50px;
+  max-width: 60%;
+}
+
+.titleLeft {
+  text-align: left;
+}
+
+.titleRight h1, .titleRight h2 {
+  padding-right: 50px;
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links {
+  color: #0e8388;
+  text-align: center;
+}
+
+.icon {
+  margin: 20px;
+  margin-top: 100px;
+  height: auto;
+  width: 5%;
+}
+
+.line {
+  margin-top: 100px;
+  background: linear-gradient(90deg, transparent 20%, #0e8388, transparent 80%);
+  height: 5px;
+  width: 100%;
 }
 
 
+.pageInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageInfo p, .pageInfo li, .pageInfo ul {
+  font-size: 15px;
+  margin: 0;
+}
 
 @media screen and (max-width: 1200px) {
+  .page {
+    position: static;
+    padding-left: 0;
+  }
 
+  .page h1,
+  .page h2,
+  .page p {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .page img {
+    padding: 50px;
+  }
+
+  .page ul {
+    padding-left: 100px;
+    width: 90%;
+  }
+
+  .logo {
+    position: static;
+    padding-top: 10%;
+    height: auto;
+    width: 250px;
+    z-index: 0;
+  }
+
+  #intro {
+    width: 100%;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 900px) {
-
+  .page h1 {
+    font-size: 75px;
+  }
+  .page h2 {
+    font-size: 50px;
+  }
+  .page img {
+    max-width: 80%;
+  }
+  .logo {
+    padding-top: 150px;
+    width: 200px;
+  }
+  .icon {
+    width: 7%;
+  }
 }
 
 @media screen and (max-width: 680px) {
+  .page h1 {
+    font-size: 65px;
+  }
+  .page h2 {
+    top: -30px;
+    font-size: 40px;
+  }
+  .page p, .page li {
+    font-size: 20px;
+  }
+  .page img {
+    padding: 20px;
+  }
+  .icon {
+    width: 9%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    width: 175px;
+  }
+  .page h1 {
+    font-size: 55px;
+  }
+  .page h2 {
+    font-size: 45px;
+  }
+  .page p, .page li {
+    font-size: 17px;
+  }
+  .icon {
+    width: 11%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .page h1,
+  .page h2,
+  .page p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .icon {
+    width: 13%;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .page h1 {
+    font-size: 45px;
+  }
+
+  .page h2 {
+    top: -20px;
+    font-size: 35px;
+  }
+  .page p, .page li {
+    font-size: 15px;
+  }
+
+  .page img {
+    max-width: 95%;
+  }
+
+  .logo {
+    padding-top: 100px;
+  }
+  .icon {
+    width: 15%;
+    margin: 10px;
+  }
   
-}
-
-@media screen and (max-width: 680px) {
- 
 }
