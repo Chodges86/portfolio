@@ -121,6 +121,7 @@
 
 .line {
   margin-top: 100px;
+  margin-bottom: 50px;
   background: linear-gradient(90deg, transparent 20%, #0e8388, transparent 80%);
   height: 5px;
   width: 100%;

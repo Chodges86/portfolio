@@ -217,6 +217,7 @@ const Home = () => {
             </IconContext.Provider>
           </div>
         </section>
+        <div className={classes.line}></div>
         <section>
           <h1>LABOR TRACKING TOOL - PLM-LLC</h1>
           <h2>google apps script tool</h2>
