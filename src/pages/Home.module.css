@@ -14,15 +14,16 @@
   padding-left: 100px;
 }
 
-.page section {
-  margin-bottom: 200px;
+#title {
+  width: 50%;
+  text-align: left;
+  /* min-height: 15vh; */
+  /* margin-bottom: 30vh; */
 }
 
 #intro {
-  width: 50%;
   text-align: left;
-  min-height: 70vh;
-  margin-bottom: 30vh;
+  width: 95%;
 }
 
 .page h1 {
@@ -53,6 +54,12 @@
   margin-bottom: 50px;
 }
 
+.page h4 {
+  font-family: "Nunito", sans-serif;
+  font-size: 35px;
+  color: #0e8388;
+}
+
 .page p, .page li {
   font-family: "Nunito", sans-serif;
   font-size: 25px;
@@ -60,6 +67,17 @@
   color: #cbe4de;
   text-align: left;
   margin: 0;
+}
+
+.page ul {
+  width: 100%;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.page li {
+  width: fit-content;
 }
 
 .page a {
@@ -140,7 +158,8 @@
   }
 
   .page ul {
-    padding-left: 100px;
+    columns: 2;
+    padding-left: 50px;
     width: 90%;
   }
 
@@ -152,10 +171,14 @@
     z-index: 0;
   }
 
+  #title {
+    width: 100%;
+    text-align: center;
+    /* min-height: 100vh; */
+  }
   #intro {
     width: 100%;
     text-align: center;
-    min-height: 100vh;
   }
 
   .flex {
@@ -226,6 +249,9 @@
   .page p {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .page img {
+    width: 250px;
   }
   .icon {
     width: 13%;

@@ -3,7 +3,7 @@ import classes from "./ContactForm.module.css";
 
 import emailjs from '@emailjs/browser'
 
-import logo from "../pages/assetts/logo-look-left.gif";
+import logo from "../pages/assetts/ch-logo.png";
 import Button from "./Button";
 
 
@@ -18,7 +18,7 @@ const ContactForm = (props) => {
   const [message, setMessage] = useState();
 
 
-  const { innerWidth: screenWidth } = window;
+  // const { innerWidth: screenWidth } = window;
   useEffect(() => {
     scrollPointRef.current.scrollIntoView();
   });
@@ -45,8 +45,6 @@ const ContactForm = (props) => {
     subject,
     message
   };
-
-  console.log(process.env.REACT_APP_EMAIL_PUBKEY)
 
   emailjs
     .send(

@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import classes from "./Home.module.css";
 
 import logoGif from "./assetts/ch-logo-wave.gif";
-import logo from './assetts/ch-logo.png'
+import logo from "./assetts/ch-logo.png";
 import aaMockupImg from "./assetts/aa_mockup_image.png";
 import aaMockupGif from "./assetts/aa_mockup.gif";
 import mapaMockupImg from "./assetts/mapa_mockup_image2.png";
@@ -32,27 +32,45 @@ const Home = () => {
         {isVisible ? (
           <img src={logoGif} alt="logo" className={classes.logo} />
         ) : (
-          <img src={logo}  className={classes.logo}/>
+          <img src={logo} alt="logo" className={classes.logo} />
         )}
       </div>
       <div className={classes.page}>
-        <section id={classes["intro"]}>
+        <section id={classes["title"]}>
           <h1>CALEB HODGES</h1>
           <h2>web developer</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet
-            nisl purus in. Eget velit aliquet sagittis id consectetur purus ut
-            faucibus.{" "}
-          </p>
-          <br />
-          <br />
           <Button
-            title="view portfolio"
+            title="Jump to Portfolio"
             onClick={() =>
               portfolioRef.current.scrollIntoView({ block: "center" })
             }
           />
+          <br />
+          <br />
+          <br />
+        </section>
+        <section id={classes["intro"]}>
+          <h4>SKILLS:</h4>
+          <ul>
+            <li>ReactJS</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Swift</li>
+            <li>UIKit</li>
+            <li>PostgreSQL</li>
+          </ul>
+          <h4>ABOUT:</h4>
+          <p>
+            I started learning to code in 2021 with some iOS app tutorials.
+            After over a year of learning Swift and UIKit to build iOS apps I
+            released an app in the App Store that I built for a christian
+            ministry in Memphis, TN. Then I decided to take my learning to the
+            next level. In 2022 I attended class at DevMountain's coding
+            bootcamp and after completing the Foundations courses, decided to
+            switch paths to web development. In July of 2023 I graduated from
+            DevMountains web development specialization bootcamp.{" "}
+          </p>
         </section>
         <h3 ref={portfolioRef}>FEATURE PROJECTS</h3>
         <section id="mapa" className={classes.titleRight}>
@@ -80,7 +98,7 @@ const Home = () => {
           </div>
           <br />
           <div className={classes.flex}>
-            <ul>
+            <ul style={{columns: 1}}>
               <li>Deployed on Ubuntu VPS</li>
               <li>PostgreSQL database with Supabase</li>
               <li>Customized emails sent with EmailJS</li>
@@ -229,7 +247,7 @@ const Home = () => {
         </section>
         <div className={classes.pageInfo}>
           <p>This site built with:</p>
-          <ul>
+          <ul style={{columns: 1, width: "fit-content"}}>
             <li>react.js</li>
             <li>react-router-dom</li>
             <li>react-icons</li>
