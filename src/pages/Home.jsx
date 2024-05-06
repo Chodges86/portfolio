@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <>
-      <div ref={logoRef}>
+      <div className={classes.logoDiv} ref={logoRef}>
         {isVisible ? (
           <img src={logoGif} alt="logo" className={classes.logo} />
         ) : (

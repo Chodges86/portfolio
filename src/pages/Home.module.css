@@ -250,6 +250,10 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+  .page ul {
+    columns: 1;
+  }
+
   .page img {
     width: 250px;
   }
@@ -282,5 +286,14 @@
     width: 15%;
     margin: 10px;
   }
-  
+
+  .page ul, img {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .logo {
+    
+  }
 }
