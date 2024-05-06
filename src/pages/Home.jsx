@@ -32,6 +32,9 @@ const Home = () => {
       <Helmet>
         <title>Caleb Hodges | Web Developer</title>
         <meta name="Portfolio website" content="Portfolio site for Caleb Hodges" />
+        <meta property="og:title" content="Caleb Hodges | Portfolio website"/>
+        <meta property="og:url" content="https://portfolio.chdevs.com/"/>
+        <meta property="og:image" content={logo}/>
       </Helmet>
       <div className={classes.logoDiv} ref={logoRef}>
         {isVisible ? (
