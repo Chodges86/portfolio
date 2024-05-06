@@ -18,6 +18,7 @@ import { TbWorld } from "react-icons/tb";
 import { FaAppStore } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { useIsVisible } from "../util/UseIsVisible";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const portfolioRef = useRef(null);
@@ -28,6 +29,10 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Caleb Hodges | Web Developer</title>
+        <meta name="Portfolio website" content="Portfolio site for Caleb Hodges" />
+      </Helmet>
       <div className={classes.logoDiv} ref={logoRef}>
         {isVisible ? (
           <img src={logoGif} alt="logo" className={classes.logo} />
@@ -98,7 +103,7 @@ const Home = () => {
           </div>
           <br />
           <div className={classes.flex}>
-            <ul style={{columns: 1}}>
+            <ul style={{ columns: 1 }}>
               <li>Deployed on Ubuntu VPS</li>
               <li>PostgreSQL database with Supabase</li>
               <li>Customized emails sent with EmailJS</li>
@@ -248,7 +253,7 @@ const Home = () => {
         </section>
         <div className={classes.pageInfo}>
           <p>This site built with:</p>
-          <ul style={{columns: 1, width: "fit-content"}}>
+          <ul style={{ columns: 1, width: "fit-content" }}>
             <li>react.js</li>
             <li>react-router-dom</li>
             <li>react-icons</li>
