@@ -88,7 +88,7 @@
   color: #0c6e71;
 }
 
-.page img {
+.page img, video {
   margin-top: 50px;
   max-width: 60%;
 }

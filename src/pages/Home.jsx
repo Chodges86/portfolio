@@ -3,7 +3,6 @@ import { useRef } from "react";
 import Button from "../components/Button";
 import classes from "./Home.module.css";
 
-import logoGif from "./assetts/ch-logo-wave.gif";
 import logo from "./assetts/ch-logo.png";
 import aaMockupImg from "./assetts/aa_mockup_image.png";
 import aaMockupGif from "./assetts/aa_mockup.gif";
@@ -11,44 +10,40 @@ import mapaMockupImg from "./assetts/mapa_mockup_image2.png";
 import mapaMockuGif from "./assetts/mapa_mockup.gif";
 import byTheHourGif from "./assetts/by_the_hour_mockup.gif";
 import plmGif from "./assetts/plm_mockup.gif";
+import gfVid from "./assetts/gf_vid.mp4";
 
 import { IconContext } from "react-icons";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { FaAppStore } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
-import { useIsVisible } from "../util/UseIsVisible";
+
 import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const portfolioRef = useRef(null);
-  const logoRef = useRef(null);
-  const isVisible = useIsVisible(logoRef);
-
   const year = new Date().getFullYear();
 
   return (
     <>
       <Helmet>
         <title>Caleb Hodges | Web Developer</title>
-        <meta name="Portfolio website" content="Portfolio site for Caleb Hodges" />
-        <meta property="og:title" content="Caleb Hodges | Portfolio website"/>
-        <meta property="og:url" content="https://portfolio.chdevs.com/"/>
-        <meta property="og:image" content={logo}/>
+        <meta
+          name="Portfolio website"
+          content="Portfolio site for Caleb Hodges"
+        />
+        <meta property="og:title" content="Caleb Hodges | Portfolio website" />
+        <meta property="og:url" content="https://portfolio.chdevs.com/" />
+        <meta property="og:image" content={logo} />
       </Helmet>
-      <div className={classes.logoDiv} ref={logoRef}>
-        {isVisible ? (
-          <img src={logoGif} alt="logo" className={classes.logo} />
-        ) : (
-          <img src={logo} alt="logo" className={classes.logo} />
-        )}
-      </div>
+
+      <img src={logo} alt="logo" className={classes.logo} />
       <div className={classes.page}>
         <section id={classes["title"]}>
           <h1>CALEB HODGES</h1>
           <h2>web developer</h2>
           <Button
-            title="Jump to Portfolio"
+            title="Jump to Projects"
             onClick={() =>
               portfolioRef.current.scrollIntoView({ block: "center" })
             }
@@ -98,7 +93,7 @@ const Home = () => {
             <img src={mapaMockupImg} alt="mockup for MAPA site" />
             <ul>
               <li>React</li>
-              <li>Axio</li>
+              <li>Axios</li>
               <li>Express</li>
               <li>Sequelize</li>
               <li>PostgreSQL</li>
@@ -189,6 +184,50 @@ const Home = () => {
             <div className={classes.line}></div>
           </div>
         </section>
+        <section id="mapa" className={classes.titleRight}>
+          <h1>GROUND FORCES ROBOTIC LAWN MOWERS</h1>
+          <h2>react.js website</h2>
+          <p>
+            A website I was hired to build for a company selling robotic lawn
+            mowers. This site has a calculator built to allow potential
+            customers to enter in information and determine which mower is right
+            for their lawn. It also uses Stripe to process payments and EmailJS
+            to send confirmation emails, as well as fulfillment and contact us
+            emails.
+          </p>
+          <br />
+          <br />
+          <div className={classes.flex}>
+            <ul>
+              <li>React</li>
+              <li>Axios</li>
+              <li>Express</li>
+              <li>Stripe payment processing</li>
+              <li>Customized emails sent with EmailJS</li>
+            </ul>
+          </div>
+          <video
+            src={gfVid}
+            autoPlay
+            loop="loop"
+            preload="metadata"
+            muted
+            playsInline
+          ></video>
+          <br />
+          <br />
+          <div className={classes.links}>
+            <IconContext.Provider value={{ size: "75px" }}>
+              <FaGithub
+                className={classes.icon}
+                onClick={() =>
+                  window.open("https://github.com/Chodges86/ground_forces_site")
+                }
+              />
+            </IconContext.Provider>
+          </div>
+          <div className={classes.line}></div>
+        </section>
         <h3>OTHER PROJECTS</h3>
         <section className={classes.titleRight}>
           <h1>BY THE HOUR</h1>
@@ -203,7 +242,7 @@ const Home = () => {
           </p>
           <br />
           <p>
-            Don’t want to clone it down? Check out my YouTube walk through{" "}
+            Don’t feel like cloning? Check out my YouTube walk through{" "}
             <a
               href="https://www.youtube.com/watch?v=WVfbyUl8qDs&t=11s"
               target="blank"
@@ -254,16 +293,16 @@ const Home = () => {
             </IconContext.Provider>
           </div>
         </section>
+        <div id="spacer" style={{ height: "150px" }}></div>
         <div className={classes.pageInfo}>
           <p>This site built with:</p>
           <ul style={{ columns: 1, width: "fit-content" }}>
             <li>react.js</li>
-            <li>react-router-dom</li>
+            <li>react-router</li>
             <li>react-icons</li>
           </ul>
           <br />
           <p>© {year} CH Developments & Designs, LLC.</p>
-          <br />
           <br />
         </div>
       </div>
@@ -272,3 +311,16 @@ const Home = () => {
 };
 
 export default Home;
+
+
+//* This is some code to use when the logo animation is ready
+// import { useIsVisible } from "../util/UseIsVisible";
+// const logoRef = useRef(null);
+// const isVisible = useIsVisible(logoRef);
+/* <div className={classes.logoDiv} ref={logoRef}>
+        {isVisible ? (
+          <img src={logoGif} alt="logo" className={classes.logo} />
+        ) : (
+          <img src={logo} alt="logo" className={classes.logo} />
+        )}
+      </div> */
