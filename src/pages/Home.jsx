@@ -80,14 +80,19 @@ const Home = () => {
           <h1>MISSISSIPPI ASPHALT PAVEMENT ASSOCIATION</h1>
           <h2>react.js website</h2>
           <p>
-            A fresh new website I designed and developed for the Mississippi
-            Asphalt Pavement Association that moves them from a WordPress site
-            that they manage to a customized website built in ReactJS with a
-            Node.js backend and connects to a PostgreSQL database. This project
-            is still underway but is deployed on a VPS you can visit with the
-            link below and the codebase can be seen at the GitHub link below.
+            A website that I designed and continue to develop and maintain for
+            the Mississippi Asphalt Pavement Association. This site connects to
+            a PostgreSQL database to give members access to information about
+            the association as well as the ability to make payments to the
+            association.
           </p>
           <br />
+          <p>
+            Currently we are developing the ability to sign up for upcoming
+            events, and then we will add an admin portal that will give the
+            employees of MAPA access to view and update member lists, certified
+            student lists and other data from the database.
+          </p>
           <br />
           <div className={classes.flex}>
             <img src={mapaMockupImg} alt="mockup for MAPA site" />
@@ -311,7 +316,6 @@ const Home = () => {
 };
 
 export default Home;
-
 
 //* This is some code to use when the logo animation is ready
 // import { useIsVisible } from "../util/UseIsVisible";
